@@ -1,0 +1,247 @@
+body{
+    background: url(assets/background.jpg);
+    background-size: cover;
+    background-position-x: -60px;
+    scroll-behavior: smooth;
+}
+
+a{
+    color: inherit;
+}
+
+.nav-flex{
+    display: flex;
+    position: relative;
+    height: 35vh;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+.nav-flex--mobile{
+    display: none;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.logo{
+    justify-content: center;
+    display: flex;
+    min-width: 250px;
+    margin: 0 30px;
+}
+
+.logo img{
+    height: 100%;
+}
+
+.page{
+    display: grid;
+    position: relative;
+    height: 60vh;
+    bottom: 0;
+    width: 100vw;
+    grid-template-areas: 
+    "beer food place";
+    background: rgba(0, 0, 0, 0.507);
+}
+
+.beer{
+    grid-area: beer;
+}
+
+.food{
+    grid-area: food;
+}
+
+.place{
+    grid-area: place;
+}
+
+.item{
+    display: flex;
+    overflow: hidden;
+    padding: 1%;
+}
+
+.bg{
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.item:hover > .bg{
+    transform: scale(1.02);
+    border: none;
+}
+
+.item:hover > .img-title{
+    transform: scale(1.02);
+}
+
+.bg--beer{
+    background-image: url(assets/cerveza1.jpg);
+    background-position: bottom;
+}
+
+.bg--food{
+    background-image: url(assets/comida1.jpg);
+    background-position: bottom;
+}
+
+.bg--place{
+    background-image: url(assets/local1.jpg);
+    background-position: center;
+}
+
+.hover{
+    display: none;
+}
+
+.img-title{
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-family: "Kelly Slab";
+    font-size: 3rem;
+    width: 33%;
+    background: rgba(0, 0, 0, 0.473);
+    padding: 20px;
+    bottom: 0;
+    text-shadow: 9px 5px 5px rgba(0, 0, 0, 0.815);
+}
+
+.img-title--beer{
+    left: 0;
+}
+
+.img-title--beer::before{
+    content: "Nuestras Cervezas";
+}
+
+.img-title--food::before{
+    content: "Comé rico";
+}
+
+.img-title--place::before{
+    content: "Te esperamos";
+}
+
+.footer{
+    height: 5vh;
+    display: flex;
+    font-family: "Staatliches";
+    font-size: 1.4rem;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+}
+
+.footer__established{
+    margin: 0 50px;
+}
+
+.footer__paragraph{
+    margin: auto;
+}
+
+.footer__instagram{
+    margin: 0 50px;
+}
+
+.footer__instagram i{
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width:1250px){
+    .nav-flex{
+        height: 30vh;
+    }
+    .page{
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width:900px){
+    body{
+        background: none;
+    }
+
+    .nav-flex{
+        height: 100%;
+        width: 100%;
+        background: url(assets/background2.jpg);
+        background-position-y: -10px;
+        background-size: cover;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+        order: 1;
+        height: 80px;
+        width: 20%;
+        min-width: fit-content;
+        margin: 0;
+    }
+
+    .nav-flex--mobile{
+        display: flex;
+        height: 100px;
+        width: 80%;
+        justify-content: space-evenly;
+        align-items: center;
+        order: 2;
+        color: #fff;
+        text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.815);
+        font-family: "Skranji";
+        font-size: 1.2rem;
+    }
+
+    .nav-flex--mobile a{
+        margin: 0 px;
+    }
+
+    .banner{
+        order: 3;
+        width: 100%;
+    }
+
+    .page{
+        height: 800px;
+        width: 100%;
+        grid-template-areas: 
+        "beer"
+        "food"
+        "place";
+    }
+
+    .footer{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .logo{
+        height: 60px;
+    }
+    .nav-flex--mobile{
+        height: 80px;
+        font-size: 1rem;
+    }
+}
