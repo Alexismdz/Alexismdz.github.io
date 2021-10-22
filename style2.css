@@ -104,7 +104,7 @@
 
 .friends__logo{
     height: 90%;
-    margin: 0 10px;
+    margin: 0 7px;
     min-width: max-content;
 }
 
@@ -449,10 +449,11 @@
         width: 80%;
     }
     .friends{
-        height: 130px;
+        height: 100%;
     }
     .friends__logo{
-        height: 90px;
+        height: 70px;
+        margin: 10px 5px;
     }
     .beer__title{
         font-size: 1.5rem;
@@ -502,11 +503,8 @@
 }
 
 @media screen and (max-width: 550px) {
-    .friends{
-        height: 140px;
-    }
     .friends__logo{
-        height: 60px;
+        margin: 5px 20px;
     }
     .beers{
         grid-template-columns: 1fr;
@@ -535,6 +533,9 @@
         justify-content: left;
         width: 30%;
         padding-left: 20px;
+    }
+    .nav__logo{
+        height: 100%;
     }
     .nav__instagram{
         width: 30%;
@@ -565,10 +566,25 @@
         transform: translateX(-300%);
         transition: transform 0.7s;
         box-shadow: 120px 0px 120px 120px #0000009a;
-        justify-content: center;
+        justify-content: space-between;
     }
     .nav__button:hover > .aside{
         transform: translateX(0);
+    }
+    .aside__logo{
+        height: 30%;
+        padding: 20px 0;
+    }
+    .aside__instagram{
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+    .aside__instagram i{
+        font-size: 1.4rem;
     }
     .aside__item{
         position: relative;
@@ -578,6 +594,7 @@
         display: flex;
         padding: 10px 0;
         border-top: 1px solid #66666631;
+        font-family: "Raleway";
     }
     .aside__item:last-child{
         border-bottom: 1px solid #66666631;
@@ -599,10 +616,13 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         justify-content: space-evenly;
         color: #fff;
         text-align: center;
+    }
+    .footer__p{
+        font-size: 0.8rem;
     }
     .footer__item{
         width: 100%;
@@ -618,6 +638,12 @@
     }
 }
 
+@media screen and (max-width: 350px) {
+    .friends__logo{
+        height: 50px;
+        margin: 5px;
+    }
+}
 /* 4k */
 
 @media screen and (min-width: 2000px) {
