@@ -1,0 +1,531 @@
+:root{
+    --marron: #a13007;
+    --high: 1.6rem;
+    --medium: 1.3rem;
+    --low: 1.1rem;
+    --footer: 1rem;
+    --nav: 1.5rem;
+    --back: 500px;
+}
+
+*{
+    font-family: "Fira Sans";
+}
+
+.nav{
+    overflow: hidden;
+}
+
+.nav-mobile{
+    display: none;
+}
+
+.nav-grid{
+    position: relative;
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 200px;
+    place-items: center;
+    margin: auto;
+}
+
+.logo{
+    grid-column: 2/3;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__left{
+    grid-column: 1/2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--marron);
+    font-size: var(--nav);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.nav__left a{
+    margin: 0 10px;
+}
+
+.nav__right{
+    position: relative;
+    grid-column: 3/4;
+    height: 100%;
+    width: 100%;
+    color: var(--marron);
+    font-size: var(--nav);
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav__link{
+    position: relative;
+    margin: 0 10px;
+}
+
+.nav__link i{
+    margin: 0 8px;
+}
+
+.pedidos{
+    position: relative;
+    height: var(--nav);
+    margin: 0 8px;
+}
+
+.page{
+    position: relative;
+    width: 100%;
+    font-family: "Fira Sans";
+    padding: 30px 0;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.food{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 48%;
+    height: 100%;
+    overflow: hidden;
+    color: var(--marron);
+    padding: 20px;
+    border-radius: 40px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    box-shadow: 5px 5px 10px 1px #000000a0;
+}
+
+.food__clip{
+    position: absolute;
+    left: 0;
+    width: 32%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background: var(--marron);
+    z-index: -1;
+}
+
+.principal{
+    width: 95%;
+}
+
+.food__img{
+    width: 30%;
+    height: 100%;
+}
+
+.food__img--principal{
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    border-radius: 50%;
+}
+
+.food__img--principal img{
+    display: flex;
+    width: 100%;
+}
+
+.back--pizza{
+    height: var(--back);
+    color: #fff;
+    background: url(assets/comida3.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.back--chicken{
+    height: var(--back);
+    color: #fff;
+    background: url(assets/comida2.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.food__content{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 15px;
+}
+
+.food__line{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0px 10px;
+    font-size: var(--medium);
+    height: 100%;
+    margin: auto 0;
+}
+
+.food__content--back{
+    background: #00000070;
+    width: 95%;
+    padding-bottom: 10px;
+    border-radius: 10%;
+}
+
+.food__line--description{
+    position: relative;
+    width: 80%;
+    font-family: "Raleway";
+    padding: 0px 0px 10px 20px;
+    font-size: var(--low);
+    color: #000;
+}
+
+.extra{
+    justify-content: center;
+    color: #000;
+}
+
+.extra p{
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: var(--low);
+}
+
+.food__title{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0;
+    font-size: var(--high);
+    border-bottom: 3px solid var(--marron);
+}
+
+.food__line--back{
+    color: #fff;
+}
+
+.food__price{
+    height: 100%;
+    margin: auto 0;
+    padding: 5px 20px;
+    background: var(--marron);
+    border-radius: 30px;
+    color: #fff;
+}
+
+.food__price--back{
+    color: #000;
+    background: #fff;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+    height: 150px;
+    background: #222;
+}
+
+.cont-f{
+    height: 100%;
+    display: flex;
+    position: relative;
+    font-size: var(--footer);
+    justify-content: space-evenly;
+    color: #fff;
+    text-align: left;
+}
+
+.footer__item{
+    height: 100%;
+    width: 22%;
+    padding-top: 40px;
+}
+
+.footer__item:nth-child(1){
+    padding-top: 0;
+}
+
+.footer__logo{
+    height: 80%;
+}
+
+.footer__p{
+    font-family: "Raleway";
+    font-weight: 300;
+    margin-top: 10px;
+    font-size: var(--footer);
+}
+
+.contact h4{
+    margin-bottom: 10px;
+}
+
+.footer__instagram{
+    font-size: var(--footer);
+    font-family: "Raleway";
+}
+
+.footer__instagram i{
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 1300px){
+    :root{
+        --high: 1.3rem;
+        --medium: 1.2rem;
+        --low: 1rem;
+        --footer: 0.9rem;
+        --nav: 1.3rem;
+        --back: 400px;
+    }
+    .nav-grid{
+        width: 90%;
+    }
+    .footer__item{
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    :root{
+        --high: 1.3rem;
+        --medium: 1.2rem;
+        --low: 1rem;
+        --footer: 0.7rem;
+        --nav: 1.1rem;
+        --back: 500px;
+    }
+    .nav-grid{
+        grid-template-rows: 150px;
+    }
+    .food{
+        width: 95%;
+    }
+    .principal{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .food__img--principal{
+        width: 60%;
+        margin: auto;
+    }
+    .food__content--principal{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    :root{
+        --high: 1.3rem;
+        --medium: 1.2rem;
+        --low: 1rem;
+        --footer: 1rem;
+        --back: 500px;
+    }
+    .nav-grid{
+        display: none;
+    }
+    .nav-mobile{
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+    }
+    .nav__button{
+        position: relative;
+        display: flex;
+        justify-content: left;
+        width: 30%;
+        padding-left: 20px;
+    }
+    .nav__logo{
+        height: 100%;
+    }
+    .nav__instagram{
+        width: 30%;
+        position: relative;
+        display: flex;
+        justify-content: right;
+        padding-right: 20px;
+        font-size: 1.1rem;
+    }
+    .nav__button i{
+        margin-right: 10px;
+    }
+    .nav__button h5{
+        font-size: 1rem;
+        font-family: "Raleway";
+        font-weight: 500;
+    }
+    .aside{
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        background: #ffffffee;
+        box-sizing: border-box;
+        transform: translateX(-300%);
+        transition: transform 0.7s;
+        box-shadow: 150px 0px 150px 150px #0000009a;
+        justify-content: space-between;
+    }
+    .nav__button:hover > .aside{
+        transform: translateX(0);
+    }
+    .aside__logo{
+        height: 30%;
+        padding: 20px 0;
+    }
+    .aside__instagram{
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+    .aside__instagram i{
+        font-size: 1.4rem;
+    }
+    .aside__item{
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        font-size: 1.5rem;
+        display: flex;
+        padding: 10px 0;
+        border-top: 1px solid #66666631;
+        font-family: "Raleway";
+    }
+    .aside__item:last-child{
+        border-bottom: 1px solid #66666631;
+    }
+    .aside__item img{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 10px;
+    }
+    .nav-mobile img{
+        height: 90%;
+    }
+    .footer{
+        height: 400px;
+        background: #222;
+    }
+    .cont-footer{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: grid;
+        color: #fff;
+        text-align: center;
+    }
+    .footer__item{
+        width: 100%;
+        padding-top: 10px;
+    }
+    .footer__item:nth-child(1){
+        padding-top: 10px;
+    }
+    .footer__logo{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    :root{
+        --footer: 0.7rem;
+        --back: 300px;
+        --high: 1.2rem;
+        --medium: 1rem;
+        --low: 0.9rem;
+    }
+    .nav__instagram{
+        justify-content: center;
+    }
+    .page{
+        padding-top: 0px;
+    }
+    .food{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .food__clip{
+        display: none;
+    }
+    .food__img{
+        width: 50%;
+        margin: auto;
+    }
+    .food__content{
+        width: 100%;
+        padding: 0;
+    }
+    .food__content--back{
+        padding: 10px;
+    }
+    .food__line{
+        padding: 10px 0px 0px 0px;
+    }
+    .food__line--description{
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .footer__logo{
+        height: 100px;
+    }
+    :root{
+        --footer: 0.7rem;
+    }
+    .footer{
+        height: 320px;
+    }
+}
+/* 4k */
+
+@media screen and (min-width: 2000px) {
+    :root{
+        --high: 2.2rem;
+        --medium: 1.8rem;
+        --low: 1.5rem;
+        --footer: 1.3rem;
+    }
+    .nav-flex{
+        grid-template-rows: 250px;
+    }
+    .container{
+        width: 80%;
+    }
+}
