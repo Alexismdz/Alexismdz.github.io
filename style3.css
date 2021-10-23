@@ -348,11 +348,18 @@
     .nav-grid{
         display: none;
     }
+    .nav{
+        position: sticky;
+        top: 0;
+        background: #fff;
+        z-index: 100;
+        box-shadow: 0px 2px 5px 0px #00000070;
+    }
     .nav-mobile{
         display: flex;
         position: relative;
         width: 100%;
-        height: 100px;
+        height: 80px;
         justify-content: space-between;
         align-items: center;
         z-index: 1;
@@ -372,7 +379,7 @@
         position: relative;
         display: flex;
         justify-content: right;
-        padding-right: 20px;
+        padding-right: 50px;
         font-size: 1.1rem;
     }
     .nav__button i{
@@ -468,9 +475,6 @@
         --high: 1.2rem;
         --medium: 1rem;
         --low: 0.9rem;
-    }
-    .nav__instagram{
-        justify-content: center;
     }
     .page{
         padding-top: 0px;
